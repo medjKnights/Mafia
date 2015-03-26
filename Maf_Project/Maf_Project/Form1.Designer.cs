@@ -38,7 +38,6 @@
             this.містаТаФіліїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.азазаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
@@ -50,8 +49,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.відкритиToolStripMenuItem,
             this.справочнаToolStripMenuItem,
-            this.справкаToolStripMenuItem,
-            this.азазаToolStripMenuItem});
+            this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(625, 24);
@@ -73,26 +71,26 @@
             // лічильникиToolStripMenuItem
             // 
             this.лічильникиToolStripMenuItem.Name = "лічильникиToolStripMenuItem";
-            this.лічильникиToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.лічильникиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.лічильникиToolStripMenuItem.Text = "Гравці";
             this.лічильникиToolStripMenuItem.Click += new System.EventHandler(this.лічильникиToolStripMenuItem_Click);
             // 
             // коректориToolStripMenuItem
             // 
             this.коректориToolStripMenuItem.Name = "коректориToolStripMenuItem";
-            this.коректориToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.коректориToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.коректориToolStripMenuItem.Text = "Ігри";
             this.коректориToolStripMenuItem.Click += new System.EventHandler(this.коректориToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(106, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             this.вихідToolStripMenuItem.MouseEnter += new System.EventHandler(this.вихідToolStripMenuItem_MouseEnter);
@@ -129,12 +127,6 @@
             this.проПрограмуToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.проПрограмуToolStripMenuItem.Text = "Про програму";
             this.проПрограмуToolStripMenuItem.Click += new System.EventHandler(this.проПрограмуToolStripMenuItem_Click);
-            // 
-            // азазаToolStripMenuItem
-            // 
-            this.азазаToolStripMenuItem.Name = "азазаToolStripMenuItem";
-            this.азазаToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.азазаToolStripMenuItem.Text = "азаза1";
             // 
             // statusStrip1
             // 
@@ -187,7 +179,6 @@
         private System.Windows.Forms.ToolStripMenuItem лічильникиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem коректориToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem містаТаФіліїToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem азазаToolStripMenuItem;
     }
 }
 

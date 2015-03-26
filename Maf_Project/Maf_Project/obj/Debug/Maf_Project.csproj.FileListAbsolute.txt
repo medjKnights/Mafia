@@ -10,3 +10,6 @@ C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug
 E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe.config
 E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.exe
 E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.pdb
+C:\Users\АнОНиМ\Documents\GitHub\Mafia\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe.config
+C:\Users\АнОНиМ\Documents\GitHub\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.exe
+C:\Users\АнОНиМ\Documents\GitHub\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.pdb
