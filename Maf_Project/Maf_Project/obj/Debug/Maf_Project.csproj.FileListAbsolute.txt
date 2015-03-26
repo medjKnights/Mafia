@@ -1,0 +1,12 @@
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe.config
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\bin\Debug\Maf_Project.pdb
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug\Maf_Project.csprojResolveAssemblyReference.cache
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug\Maf_Project.Form1.resources
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug\Maf_Project.Properties.Resources.resources
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug\Maf_Project.csproj.GenerateResource.Cache
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug\Maf_Project.exe
+C:\Users\Миша\Documents\GitHub\Maf_Project\Maf_Project\Maf_Project\obj\Debug\Maf_Project.pdb
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe.config
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.exe
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.pdb
