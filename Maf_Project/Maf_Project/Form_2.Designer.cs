@@ -71,7 +71,7 @@
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(592, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(538, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -189,8 +189,8 @@
             this.splitContainerEmployee.Panel2.Controls.Add(this.label4);
             this.splitContainerEmployee.Panel2.Controls.Add(this.label3);
             this.splitContainerEmployee.Panel2.Controls.Add(this.label2);
-            this.splitContainerEmployee.Size = new System.Drawing.Size(592, 239);
-            this.splitContainerEmployee.SplitterDistance = 295;
+            this.splitContainerEmployee.Size = new System.Drawing.Size(538, 239);
+            this.splitContainerEmployee.SplitterDistance = 268;
             this.splitContainerEmployee.TabIndex = 6;
             // 
             // label1
@@ -213,7 +213,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 139);
+            this.label5.Location = new System.Drawing.Point(42, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 26;
@@ -222,7 +222,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 87);
+            this.label4.Location = new System.Drawing.Point(65, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 2;
@@ -231,7 +231,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 113);
+            this.label3.Location = new System.Drawing.Point(70, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 1;
@@ -240,7 +240,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 61);
+            this.label2.Location = new System.Drawing.Point(73, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 0;
@@ -248,28 +248,28 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 58);
+            this.textBox1.Location = new System.Drawing.Point(100, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 27;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 84);
+            this.textBox2.Location = new System.Drawing.Point(100, 69);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 28;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(95, 109);
+            this.textBox3.Location = new System.Drawing.Point(100, 94);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 29;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(95, 136);
+            this.textBox4.Location = new System.Drawing.Point(100, 121);
             this.textBox4.MaxLength = 10;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 264);
+            this.ClientSize = new System.Drawing.Size(538, 264);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.splitContainerEmployee);
             this.Controls.Add(this.toolStrip1);
