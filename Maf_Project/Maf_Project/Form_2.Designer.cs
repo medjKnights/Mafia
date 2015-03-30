@@ -198,9 +198,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Список податків:";
+            this.label1.Text = "Список гравців:";
             // 
             // listBoxEmployee
             // 
@@ -284,7 +284,7 @@
             this.Controls.Add(this.splitContainerEmployee);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_2";
-            this.Text = "Інформація про податки:";
+            this.Text = "Інформація про гравців";
             this.Load += new System.EventHandler(this.Form_1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
