@@ -13,3 +13,11 @@ E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_
 C:\Users\АнОНиМ\Documents\GitHub\Mafia\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe.config
 C:\Users\АнОНиМ\Documents\GitHub\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.exe
 C:\Users\АнОНиМ\Documents\GitHub\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.pdb
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\bin\Debug\Maf_Project.exe
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\bin\Debug\Maf_Project.pdb
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.csprojResolveAssemblyReference.cache
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.Form1.resources
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.Form_2.resources
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.gamers.resources
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.Properties.Resources.resources
+E:\Колледж\4 курс\ГДК\Mafia\Maf_Project\Maf_Project\obj\Debug\Maf_Project.csproj.GenerateResource.Cache
