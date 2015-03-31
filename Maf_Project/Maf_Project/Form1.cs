@@ -36,12 +36,9 @@ namespace Maf_Project
 
         private void коректориToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Form_2 FForm = new Form_2();
-            //FForm.MdiParent = this;
-            //FForm.Text = (sender as ToolStripMenuItem).Text;
-            //FForm.person = person;
-            //FForm.posada = posada;
-            //FForm.Show();
+            Form_1 FForm = new Form_1();
+            FForm.MdiParent = this;
+            FForm.Show();
         }
 
         private void лічильникиToolStripMenuItem_Click(object sender, EventArgs e)

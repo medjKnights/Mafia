@@ -361,6 +361,8 @@ namespace Maf_Project {
             
             private global::System.Data.DataColumn columnpoints;
             
+            private global::System.Data.DataColumn columnposition;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public gameplayDataTable() {
@@ -444,6 +446,14 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn positionColumn {
+                get {
+                    return this.columnposition;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -479,7 +489,7 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public gameplayRow AddgameplayRow(int id_game, int id_gamer, string role, string at_table, int fols, float points) {
+            public gameplayRow AddgameplayRow(int id_game, int id_gamer, string role, string at_table, int fols, float points, int position) {
                 gameplayRow rowgameplayRow = ((gameplayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_game,
@@ -487,7 +497,8 @@ namespace Maf_Project {
                         role,
                         at_table,
                         fols,
-                        points};
+                        points,
+                        position};
                 rowgameplayRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgameplayRow);
                 return rowgameplayRow;
@@ -524,6 +535,7 @@ namespace Maf_Project {
                 this.columnat_table = base.Columns["at_table"];
                 this.columnfols = base.Columns["fols"];
                 this.columnpoints = base.Columns["points"];
+                this.columnposition = base.Columns["position"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -541,6 +553,8 @@ namespace Maf_Project {
                 base.Columns.Add(this.columnfols);
                 this.columnpoints = new global::System.Data.DataColumn("points", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpoints);
+                this.columnposition = new global::System.Data.DataColumn("position", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnposition);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_game,
                                 this.columnid_gamer}, true));
@@ -687,7 +701,7 @@ namespace Maf_Project {
             
             private global::System.Data.DataColumn columnfirst_kill;
             
-            private global::System.Data.DataColumn columnbest_gemer;
+            private global::System.Data.DataColumn columnbest_gаmer;
             
             private global::System.Data.DataColumn columnbest_rate;
             
@@ -752,9 +766,9 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn best_gemerColumn {
+            public global::System.Data.DataColumn best_gаmerColumn {
                 get {
-                    return this.columnbest_gemer;
+                    return this.columnbest_gаmer;
                 }
             }
             
@@ -811,13 +825,13 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public gamesRow AddgamesRow(string winer, int first_kill, int best_gemer, int best_rate, System.DateTime date) {
+            public gamesRow AddgamesRow(string winer, int first_kill, int best_gаmer, int best_rate, System.DateTime date) {
                 gamesRow rowgamesRow = ((gamesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         winer,
                         first_kill,
-                        best_gemer,
+                        best_gаmer,
                         best_rate,
                         date};
                 rowgamesRow.ItemArray = columnValuesArray;
@@ -852,7 +866,7 @@ namespace Maf_Project {
                 this.columnid = base.Columns["id"];
                 this.columnwiner = base.Columns["winer"];
                 this.columnfirst_kill = base.Columns["first_kill"];
-                this.columnbest_gemer = base.Columns["best_gemer"];
+                this.columnbest_gаmer = base.Columns["best_gаmer"];
                 this.columnbest_rate = base.Columns["best_rate"];
                 this.columndate = base.Columns["date"];
             }
@@ -866,8 +880,8 @@ namespace Maf_Project {
                 base.Columns.Add(this.columnwiner);
                 this.columnfirst_kill = new global::System.Data.DataColumn("first_kill", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfirst_kill);
-                this.columnbest_gemer = new global::System.Data.DataColumn("best_gemer", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbest_gemer);
+                this.columnbest_gаmer = new global::System.Data.DataColumn("best_gаmer", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbest_gаmer);
                 this.columnbest_rate = new global::System.Data.DataColumn("best_rate", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbest_rate);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1416,6 +1430,22 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int position {
+                get {
+                    try {
+                        return ((int)(this[this.tablegameplay.positionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'position\' в таблице \'gameplay\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegameplay.positionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsroleNull() {
                 return this.IsNull(this.tablegameplay.roleColumn);
             }
@@ -1460,6 +1490,18 @@ namespace Maf_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetpointsNull() {
                 this[this.tablegameplay.pointsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspositionNull() {
+                return this.IsNull(this.tablegameplay.positionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpositionNull() {
+                this[this.tablegameplay.positionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1522,17 +1564,17 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int best_gemer {
+            public int best_gаmer {
                 get {
                     try {
-                        return ((int)(this[this.tablegames.best_gemerColumn]));
+                        return ((int)(this[this.tablegames.best_gаmerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'best_gemer\' в таблице \'games\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'best_gаmer\' в таблице \'games\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablegames.best_gemerColumn] = value;
+                    this[this.tablegames.best_gаmerColumn] = value;
                 }
             }
             
@@ -1594,14 +1636,14 @@ namespace Maf_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isbest_gemerNull() {
-                return this.IsNull(this.tablegames.best_gemerColumn);
+            public bool Isbest_gаmerNull() {
+                return this.IsNull(this.tablegames.best_gаmerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setbest_gemerNull() {
-                this[this.tablegames.best_gemerColumn] = global::System.Convert.DBNull;
+            public void Setbest_gаmerNull() {
+                this[this.tablegames.best_gаmerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1972,10 +2014,11 @@ namespace Maf_Project.DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("at_table", "at_table");
             tableMapping.ColumnMappings.Add("fols", "fols");
             tableMapping.ColumnMappings.Add("points", "points");
+            tableMapping.ColumnMappings.Add("position", "position");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[gameplay] WHERE (([id_game] = @Original_id_game) AND ([id_gamer] = @Original_id_gamer) AND ((@IsNull_fols = 1 AND [fols] IS NULL) OR ([fols] = @Original_fols)) AND ((@IsNull_points = 1 AND [points] IS NULL) OR ([points] = @Original_points)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[gameplay] WHERE (([id_game] = @Original_id_game) AND ([id_gamer] = @Original_id_gamer) AND ((@IsNull_fols = 1 AND [fols] IS NULL) OR ([fols] = @Original_fols)) AND ((@IsNull_points = 1 AND [points] IS NULL) OR ([points] = @Original_points)) AND ((@IsNull_position = 1 AND [position] IS NULL) OR ([position] = @Original_position)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_game", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_game", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_gamer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_gamer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1983,10 +2026,12 @@ namespace Maf_Project.DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fols", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_points", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "points", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_points", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "points", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "position", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "position", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[gameplay] ([id_game], [id_gamer], [role], [at_table], [fols], [points]) VALUES (@id_game, @id_gamer, @role, @at_table, @fols, @points);
-SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_game = @id_game) AND (id_gamer = @id_gamer)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[gameplay] ([id_game], [id_gamer], [role], [at_table], [fols], [points], [position]) VALUES (@id_game, @id_gamer, @role, @at_table, @fols, @points, @position);
+SELECT id_game, id_gamer, role, at_table, fols, points, position FROM gameplay WHERE (id_game = @id_game) AND (id_gamer = @id_gamer)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_game", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_game", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_gamer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_gamer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1994,10 +2039,11 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@at_table", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "at_table", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fols", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@points", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "points", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "position", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[gameplay] SET [id_game] = @id_game, [id_gamer] = @id_gamer, [role] = @role, [at_table] = @at_table, [fols] = @fols, [points] = @points WHERE (([id_game] = @Original_id_game) AND ([id_gamer] = @Original_id_gamer) AND ((@IsNull_fols = 1 AND [fols] IS NULL) OR ([fols] = @Original_fols)) AND ((@IsNull_points = 1 AND [points] IS NULL) OR ([points] = @Original_points)));
-SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_game = @id_game) AND (id_gamer = @id_gamer)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[gameplay] SET [id_game] = @id_game, [id_gamer] = @id_gamer, [role] = @role, [at_table] = @at_table, [fols] = @fols, [points] = @points, [position] = @position WHERE (([id_game] = @Original_id_game) AND ([id_gamer] = @Original_id_gamer) AND ((@IsNull_fols = 1 AND [fols] IS NULL) OR ([fols] = @Original_fols)) AND ((@IsNull_points = 1 AND [points] IS NULL) OR ([points] = @Original_points)) AND ((@IsNull_position = 1 AND [position] IS NULL) OR ([position] = @Original_position)));
+SELECT id_game, id_gamer, role, at_table, fols, points, position FROM gameplay WHERE (id_game = @id_game) AND (id_gamer = @id_gamer)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_game", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_game", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_gamer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_gamer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2005,12 +2051,15 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@at_table", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "at_table", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fols", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@points", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "points", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "position", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_game", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_game", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_gamer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_gamer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fols", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fols", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fols", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_points", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "points", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_points", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "points", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "position", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "position", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2026,7 +2075,8 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_game, id_gamer, role, at_table, fols, points FROM dbo.gameplay";
+            this._commandCollection[0].CommandText = "SELECT id_game, id_gamer, role, at_table, fols, points, position FROM dbo.gamepla" +
+                "y";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2087,7 +2137,7 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_game, int Original_id_gamer, global::System.Nullable<int> Original_fols, global::System.Nullable<float> Original_points) {
+        public virtual int Delete(int Original_id_game, int Original_id_gamer, global::System.Nullable<int> Original_fols, global::System.Nullable<float> Original_points, global::System.Nullable<int> Original_position) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_game));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_gamer));
             if ((Original_fols.HasValue == true)) {
@@ -2105,6 +2155,14 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_position.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_position.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2126,7 +2184,7 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_game, int id_gamer, string role, string at_table, global::System.Nullable<int> fols, global::System.Nullable<float> points) {
+        public virtual int Insert(int id_game, int id_gamer, string role, string at_table, global::System.Nullable<int> fols, global::System.Nullable<float> points, global::System.Nullable<int> position) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_game));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_gamer));
             if ((role == null)) {
@@ -2153,6 +2211,12 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
+            if ((position.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(position.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2173,7 +2237,7 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_game, int id_gamer, string role, string at_table, global::System.Nullable<int> fols, global::System.Nullable<float> points, int Original_id_game, int Original_id_gamer, global::System.Nullable<int> Original_fols, global::System.Nullable<float> Original_points) {
+        public virtual int Update(int id_game, int id_gamer, string role, string at_table, global::System.Nullable<int> fols, global::System.Nullable<float> points, global::System.Nullable<int> position, int Original_id_game, int Original_id_gamer, global::System.Nullable<int> Original_fols, global::System.Nullable<float> Original_points, global::System.Nullable<int> Original_position) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_game));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_gamer));
             if ((role == null)) {
@@ -2200,23 +2264,37 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_game));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_gamer));
-            if ((Original_fols.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_fols.Value));
+            if ((position.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(position.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_game));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id_gamer));
+            if ((Original_fols.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_fols.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_points.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((float)(Original_points.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((float)(Original_points.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_position.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_position.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2238,8 +2316,8 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string role, string at_table, global::System.Nullable<int> fols, global::System.Nullable<float> points, int Original_id_game, int Original_id_gamer, global::System.Nullable<int> Original_fols, global::System.Nullable<float> Original_points) {
-            return this.Update(Original_id_game, Original_id_gamer, role, at_table, fols, points, Original_id_game, Original_id_gamer, Original_fols, Original_points);
+        public virtual int Update(string role, string at_table, global::System.Nullable<int> fols, global::System.Nullable<float> points, global::System.Nullable<int> position, int Original_id_game, int Original_id_gamer, global::System.Nullable<int> Original_fols, global::System.Nullable<float> Original_points, global::System.Nullable<int> Original_position) {
+            return this.Update(Original_id_game, Original_id_gamer, role, at_table, fols, points, position, Original_id_game, Original_id_gamer, Original_fols, Original_points, Original_position);
         }
     }
     
@@ -2367,50 +2445,50 @@ SELECT id_game, id_gamer, role, at_table, fols, points FROM gameplay WHERE (id_g
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("winer", "winer");
             tableMapping.ColumnMappings.Add("first_kill", "first_kill");
-            tableMapping.ColumnMappings.Add("best_gemer", "best_gemer");
+            tableMapping.ColumnMappings.Add("best_gаmer", "best_gаmer");
             tableMapping.ColumnMappings.Add("best_rate", "best_rate");
             tableMapping.ColumnMappings.Add("date", "date");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[games] WHERE (([id] = @Original_id) AND ((@IsNull_first_kill = 1 AND [first_kill] IS NULL) OR ([first_kill] = @Original_first_kill)) AND ((@IsNull_best_gemer = 1 AND [best_gemer] IS NULL) OR ([best_gemer] = @Original_best_gemer)) AND ((@IsNull_best_rate = 1 AND [best_rate] IS NULL) OR ([best_rate] = @Original_best_rate)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[games] WHERE (([id] = @Original_id) AND ((@IsNull_first_kill = 1 AND [first_kill] IS NULL) OR ([first_kill] = @Original_first_kill)) AND ((@IsNull_best_gаmer = 1 AND [best_gаmer] IS NULL) OR ([best_gаmer] = @Original_best_gаmer)) AND ((@IsNull_best_rate = 1 AND [best_rate] IS NULL) OR ([best_rate] = @Original_best_rate)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_first_kill", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_kill", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_first_kill", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_kill", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_best_gemer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gemer", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_best_gemer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gemer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_best_gаmer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gаmer", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_best_gаmer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gаmer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_best_rate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_rate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_best_rate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_rate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[games] ([winer], [first_kill], [best_gemer], [best_rate], [dat" +
-                "e]) VALUES (@winer, @first_kill, @best_gemer, @best_rate, @date);\r\nSELECT id, wi" +
-                "ner, first_kill, best_gemer, best_rate, date FROM games WHERE (id = SCOPE_IDENTI" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[games] ([winer], [first_kill], [best_gаmer], [best_rate], [dat" +
+                "e]) VALUES (@winer, @first_kill, @best_gаmer, @best_rate, @date);\r\nSELECT id, wi" +
+                "ner, first_kill, best_gаmer, best_rate, date FROM games WHERE (id = SCOPE_IDENTI" +
                 "TY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@winer", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "winer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@first_kill", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_kill", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@best_gemer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gemer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@best_gаmer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gаmer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@best_rate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_rate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[games] SET [winer] = @winer, [first_kill] = @first_kill, [best_gemer] = @best_gemer, [best_rate] = @best_rate, [date] = @date WHERE (([id] = @Original_id) AND ((@IsNull_first_kill = 1 AND [first_kill] IS NULL) OR ([first_kill] = @Original_first_kill)) AND ((@IsNull_best_gemer = 1 AND [best_gemer] IS NULL) OR ([best_gemer] = @Original_best_gemer)) AND ((@IsNull_best_rate = 1 AND [best_rate] IS NULL) OR ([best_rate] = @Original_best_rate)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)));
-SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[games] SET [winer] = @winer, [first_kill] = @first_kill, [best_gаmer] = @best_gаmer, [best_rate] = @best_rate, [date] = @date WHERE (([id] = @Original_id) AND ((@IsNull_first_kill = 1 AND [first_kill] IS NULL) OR ([first_kill] = @Original_first_kill)) AND ((@IsNull_best_gаmer = 1 AND [best_gаmer] IS NULL) OR ([best_gаmer] = @Original_best_gаmer)) AND ((@IsNull_best_rate = 1 AND [best_rate] IS NULL) OR ([best_rate] = @Original_best_rate)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)));
+SELECT id, winer, first_kill, best_gаmer, best_rate, date FROM games WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@winer", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "winer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@first_kill", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_kill", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@best_gemer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gemer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@best_gаmer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gаmer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@best_rate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_rate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_first_kill", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_kill", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_first_kill", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_kill", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_best_gemer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gemer", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_best_gemer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gemer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_best_gаmer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gаmer", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_best_gаmer", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_gаmer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_best_rate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_rate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_best_rate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "best_rate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -2431,7 +2509,7 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, winer, first_kill, best_gemer, best_rate, date FROM dbo.games";
+            this._commandCollection[0].CommandText = "SELECT id, winer, first_kill, best_gаmer, best_rate, date FROM dbo.games";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2492,7 +2570,7 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, global::System.Nullable<int> Original_first_kill, global::System.Nullable<int> Original_best_gemer, global::System.Nullable<int> Original_best_rate, global::System.Nullable<global::System.DateTime> Original_date) {
+        public virtual int Delete(int Original_id, global::System.Nullable<int> Original_first_kill, global::System.Nullable<int> Original_best_gаmer, global::System.Nullable<int> Original_best_rate, global::System.Nullable<global::System.DateTime> Original_date) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_first_kill.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -2502,9 +2580,9 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_best_gemer.HasValue == true)) {
+            if ((Original_best_gаmer.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_best_gemer.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_best_gаmer.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -2546,7 +2624,7 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string winer, global::System.Nullable<int> first_kill, global::System.Nullable<int> best_gemer, global::System.Nullable<int> best_rate, global::System.Nullable<global::System.DateTime> date) {
+        public virtual int Insert(string winer, global::System.Nullable<int> first_kill, global::System.Nullable<int> best_gаmer, global::System.Nullable<int> best_rate, global::System.Nullable<global::System.DateTime> date) {
             if ((winer == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2559,8 +2637,8 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((best_gemer.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(best_gemer.Value));
+            if ((best_gаmer.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(best_gаmer.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -2597,7 +2675,7 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string winer, global::System.Nullable<int> first_kill, global::System.Nullable<int> best_gemer, global::System.Nullable<int> best_rate, global::System.Nullable<global::System.DateTime> date, int Original_id, global::System.Nullable<int> Original_first_kill, global::System.Nullable<int> Original_best_gemer, global::System.Nullable<int> Original_best_rate, global::System.Nullable<global::System.DateTime> Original_date, int id) {
+        public virtual int Update(string winer, global::System.Nullable<int> first_kill, global::System.Nullable<int> best_gаmer, global::System.Nullable<int> best_rate, global::System.Nullable<global::System.DateTime> date, int Original_id, global::System.Nullable<int> Original_first_kill, global::System.Nullable<int> Original_best_gаmer, global::System.Nullable<int> Original_best_rate, global::System.Nullable<global::System.DateTime> Original_date, int id) {
             if ((winer == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2610,8 +2688,8 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((best_gemer.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(best_gemer.Value));
+            if ((best_gаmer.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(best_gаmer.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -2637,9 +2715,9 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_best_gemer.HasValue == true)) {
+            if ((Original_best_gаmer.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_best_gemer.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_best_gаmer.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
@@ -2682,8 +2760,8 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string winer, global::System.Nullable<int> first_kill, global::System.Nullable<int> best_gemer, global::System.Nullable<int> best_rate, global::System.Nullable<global::System.DateTime> date, int Original_id, global::System.Nullable<int> Original_first_kill, global::System.Nullable<int> Original_best_gemer, global::System.Nullable<int> Original_best_rate, global::System.Nullable<global::System.DateTime> Original_date) {
-            return this.Update(winer, first_kill, best_gemer, best_rate, date, Original_id, Original_first_kill, Original_best_gemer, Original_best_rate, Original_date, Original_id);
+        public virtual int Update(string winer, global::System.Nullable<int> first_kill, global::System.Nullable<int> best_gаmer, global::System.Nullable<int> best_rate, global::System.Nullable<global::System.DateTime> date, int Original_id, global::System.Nullable<int> Original_first_kill, global::System.Nullable<int> Original_best_gаmer, global::System.Nullable<int> Original_best_rate, global::System.Nullable<global::System.DateTime> Original_date) {
+            return this.Update(winer, first_kill, best_gаmer, best_rate, date, Original_id, Original_first_kill, Original_best_gаmer, Original_best_rate, Original_date, Original_id);
         }
     }
     
@@ -2820,7 +2898,7 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[gamers] ([name], [nik], [tel]) VALUES (@name, @nik, @tel);\r\nSE" +
@@ -2828,7 +2906,7 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nik", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[gamers] SET [name] = @name, [nik] = @nik, [tel] = @tel WHERE (([id]" +
@@ -2837,10 +2915,10 @@ SELECT id, winer, first_kill, best_gemer, best_rate, date FROM games WHERE (id =
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nik", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
