@@ -42,8 +42,6 @@ namespace Maf_Project
             textBox4.DataBindings.Add("Text", dsEmployee, "games.best_gаmer");
             textBox5.DataBindings.Add("Text", dsEmployee, "games.best_rate");
             textBox6.DataBindings.Add("Text", dsEmployee, "games.date");
-            
-
         }
 
         
@@ -71,7 +69,7 @@ namespace Maf_Project
         {
 
             SqlConnection c = new SqlConnection(Properties.Settings.Default.MafiaConnectionString);
-            SqlCommand query = new SqlCommand("SELECT id_game as Game, id_gamer as Gamer, position as position, role as Role FROM gameplay WHERE id_game=" + textBox1.Text, c);
+            SqlCommand query = new SqlCommand("SELECT id_gamer as Gamer, position as position, role as Role, at_table as Status, fols as Fols FROM gameplay WHERE id_game=" + textBox1.Text, c);
             c.Open();
             ArrayList w = new ArrayList(0);
             SqlDataReader reader;
@@ -94,7 +92,7 @@ namespace Maf_Project
         private void Form_1_Load(object sender, EventArgs e)
         {
            
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            
             EmployeeFill();
            
             textBox1.ReadOnly = true;
@@ -309,42 +307,10 @@ namespace Maf_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int idd = 0;
-            int rozmir = 0;
-            SqlConnection c = new SqlConnection(Properties.Settings.Default.MafiaConnectionString);
-            SqlCommand query = new SqlCommand("SELECT id FROM gamers WHERE name='"+comboBox1.Text+"'", c);
-            c.Open();                    
-            try
-            {
-                idd = Convert.ToInt32( query.ExecuteScalar() );
-                
-            }
-            catch
-            {
-                idd = 1;
-            }
-            c.Close();
-            SqlCommand query2 = new SqlCommand("SELECT rozmir FROM gamers WHERE id='" + idd + "'", c);
-            c.Open();
-            try
-            {
-                rozmir = Convert.ToInt32(query2.ExecuteScalar());
-            }
-            catch
-            {
-                rozmir = 1;
-            }
-            c.Close();
 
-            DataRow rowEmployee = this.dsEmployee.gameplay.NewgameplayRow();
-            rowEmployee["games_id"] = textBox1.Text;
-            rowEmployee["gamers_id"] = idd;
-            //rowEmployee["splacheno"] =  Convert.ToDouble(textBox7.Text)/100 * rozmir;
-            DateTime data = DateTime.Now;            
-            rowEmployee["data"] = data;
-            dsEmployee.gameplay.Rows.Add(rowEmployee);
-            Save2();
-            MessageBox.Show("Оплату здійснено успішно!");
+
+            gameplay gp = new gameplay();
+            gp.ShowDialog();
             getHistory();
         }
 
@@ -356,6 +322,11 @@ namespace Maf_Project
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             getHistory();
+        }
+
+        private void splitContainerEmployee_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
 

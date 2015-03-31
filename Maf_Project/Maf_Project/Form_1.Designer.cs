@@ -47,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxEmployee = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.podatokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -193,7 +192,6 @@
             // splitContainerEmployee.Panel2
             // 
             this.splitContainerEmployee.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainerEmployee.Panel2.Controls.Add(this.comboBox1);
             this.splitContainerEmployee.Panel2.Controls.Add(this.button1);
             this.splitContainerEmployee.Panel2.Controls.Add(this.textBox6);
             this.splitContainerEmployee.Panel2.Controls.Add(this.textBox5);
@@ -207,6 +205,7 @@
             this.splitContainerEmployee.Panel2.Controls.Add(this.label4);
             this.splitContainerEmployee.Panel2.Controls.Add(this.label3);
             this.splitContainerEmployee.Panel2.Controls.Add(this.label2);
+            this.splitContainerEmployee.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerEmployee_Panel2_Paint);
             this.splitContainerEmployee.Size = new System.Drawing.Size(860, 408);
             this.splitContainerEmployee.SplitterDistance = 315;
             this.splitContainerEmployee.TabIndex = 6;
@@ -216,9 +215,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Список платників:";
+            this.label1.Text = "Список ігор:";
             // 
             // listBoxEmployee
             // 
@@ -231,22 +230,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 200);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(507, 169);
             this.dataGridView1.TabIndex = 31;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.podatokBindingSource;
-            this.comboBox1.DisplayMember = "name";
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 163);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 30;
-            this.comboBox1.ValueMember = "name";
             // 
             // podatokBindingSource
             // 
@@ -255,11 +242,11 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(137, 163);
+            this.button1.Location = new System.Drawing.Point(12, 171);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.Size = new System.Drawing.Size(179, 23);
             this.button1.TabIndex = 29;
-            this.button1.Text = "Сплатити податок";
+            this.button1.Text = "Додати відомість про гравця";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -375,7 +362,7 @@
             this.Controls.Add(this.splitContainerEmployee);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form_1";
-            this.Text = "Інформація про особу";
+            this.Text = "Інформація про гру";
             this.Load += new System.EventHandler(this.Form_1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -423,7 +410,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.BindingSource podatokBindingSource;
