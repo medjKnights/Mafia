@@ -37,5 +37,10 @@ namespace Maf_Project
 
             }
         }
+
+        private void gameplay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
