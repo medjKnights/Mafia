@@ -90,15 +90,21 @@ namespace Maf_Project
        
 
         private void Form_1_Load(object sender, EventArgs e)
-        {                       
-            EmployeeFill();           
+        {
+           
+            
+            EmployeeFill();
+           
             textBox1.ReadOnly = true;
             textBox2.ReadOnly = true;
             textBox3.ReadOnly = true;
             textBox4.ReadOnly = true;
             textBox5.ReadOnly = true;
             textBox6.ReadOnly = true;
+           
 
+          
+            
             //comboBox1.DataBindings.Add("SelectedValue", dsEmployee, "gamers.ID");
         }
 
