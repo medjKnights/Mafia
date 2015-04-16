@@ -181,7 +181,6 @@
             this.Controls.Add(this.textBox1);
             this.Name = "gameplay";
             this.Text = "Відомість про гравця";
-            this.Load += new System.EventHandler(this.gameplay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
